@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Jazmine Scott: AI and automation engineer, CTO of Turnstr+, and the builder behind STEM with Jazmine.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Ccircle cx=%2732%27 cy=%2732%27 r=%2730%27 fill=%27%231f2a1f%27 stroke=%27%23c49a6c%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Georgia,serif%27 font-size=%2728%27 text-anchor=%27middle%27 fill=%27%23f2efe6%27%3ESJ%3C/text%3E%3C/svg%3E">
+<title>Jazmine Scott</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@400;500&display=swap">
+<style>
+/* Layout: STEM with Jazmine brand. Deep-green masthead holding a jasmine sprig that turns into circuit traces, then a single cream column: intro, links, about, and the brand's seven-role band at the foot. */
+:root {
+  --cream: #f2efe6;
+  --paper: #fbf9f4;
+  --ink: #1f2a1f;
+  --muted: #5b6352;
+  --line: #ddd6c6;
+  --forest: #1f2a1f;
+  --forest-ink: #f2efe6;
+  --olive: #5b6b48;
+  --mauve: #b48a8f;
+  --mauve-text: #8a5f65;
+  --gold: #c49a6c;
+  --gold-text: #8c6a3f;
+  --field: #2a372a;
+  --field-line: #4d5d46;
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-script: "Great Vibes", "Snell Roundhand", "Apple Chancery", cursive;
+  --font-body: "Jost", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream: #161e16; --paper: #1f2a1f; --ink: #f2efe6; --muted: #b5b8a6; --line: #34402f;
+    --forest: #0f150f; --forest-ink: #f2efe6; --olive: #9db083;
+    --mauve: #b48a8f; --mauve-text: #dcb3b8; --gold: #c49a6c; --gold-text: #d8b48a;
+    --field: #182118; --field-line: #3a4835;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --cream: #161e16; --paper: #1f2a1f; --ink: #f2efe6; --muted: #b5b8a6; --line: #34402f;
+  --forest: #0f150f; --forest-ink: #f2efe6; --olive: #9db083;
+  --mauve: #b48a8f; --mauve-text: #dcb3b8; --gold: #c49a6c; --gold-text: #d8b48a;
+    --field: #182118; --field-line: #3a4835;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+
+/* Masthead */
+.mast { --trace: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' fill='none' stroke='%23c49a6c' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M0 18h22v24h30M52 42h0M40 0v10h28v22h28M10 96V74h26v-14M70 96V80h-18M96 60H78v16'/%3E%3Cg fill='%23c49a6c' stroke='none'%3E%3Ccircle cx='52' cy='42' r='2.6'/%3E%3Ccircle cx='36' cy='60' r='2.6'/%3E%3Ccircle cx='52' cy='80' r='2.6'/%3E%3Ccircle cx='78' cy='76' r='2.6'/%3E%3C/g%3E%3C/svg%3E"); position: relative; background: var(--forest); color: var(--forest-ink); border-bottom: 2px solid var(--gold); }
+.mast::before { content: ""; position: absolute; inset: 0; background: var(--trace); background-size: 96px 96px; opacity: 0.22; pointer-events: none; }
+.mast-in { position: relative; max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 34px 38px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.wordmark { display: grid; gap: 2px; min-width: 0; }
+.wm-stem { font-family: var(--font-display); font-weight: 500; font-size: 3rem; line-height: 0.9; letter-spacing: 0.06em; }
+.wm-with { font-family: var(--font-script); font-size: 2.3rem; line-height: 0.9; color: var(--mauve); margin-left: 0.6rem; }
+.wm-tag { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-top: 10px; }
+.sprig { width: 210px; max-width: 48%; height: auto; flex: none; }
+
+.wrap { max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 34px 0; }
+
+/* Intro */
+.intro { display: grid; gap: 12px; }
+.mono { width: 64px; height: 64px; border-radius: 50%; background: var(--forest); border: 2px solid var(--gold); display: grid; place-items: center; font-family: var(--font-display); font-size: 28px; color: var(--forest-ink); letter-spacing: -0.02em; }
+.mono { line-height: 1; padding-bottom: 6px; }
+.mono i { font-style: normal; color: var(--mauve); display: inline-block; transform: translateY(-0.08em); }
+h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem, 9vw, 3.2rem); line-height: 1; margin: 0; text-wrap: balance; }
+.role { margin: 0; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.role b { font-weight: 500; color: var(--mauve-text); }
+.bio { margin: 4px 0 0; max-width: 62ch; }
+
+.label { display: flex; align-items: center; gap: 12px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-text); margin: 40px 0 14px; }
+.label::before { content: ""; flex: none; width: 7px; height: 7px; border: 1.5px solid var(--gold); border-radius: 50%; }
+.label::after { content: ""; flex: 1; height: 7px; background: radial-gradient(circle at calc(100% - 3.5px) 50%, var(--gold) 0 3px, transparent 3.5px), linear-gradient(var(--gold), var(--gold)) left center / calc(100% - 6px) 1px no-repeat; opacity: 0.85; }
+
+/* Links */
+/* a gold trace runs through the icons like a circuit bus; the pills cover it, so it shows in the gaps */
+.links { position: relative; list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.links::before { content: ""; position: absolute; left: 35px; top: 24px; bottom: 24px; width: 1.5px; background: var(--gold); }
+.links a {
+  display: grid; grid-template-columns: 46px 1fr auto; gap: 14px; align-items: center;
+  padding: 12px 16px 12px 12px; background: var(--paper); border: 1px solid var(--line); border-radius: 999px;
+  position: relative; color: var(--ink); text-decoration: none; transition: border-color .15s, transform .15s;
+}
+.links a:hover { border-color: var(--mauve); transform: translateY(-1px); }
+.links a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.ico { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--cream); color: var(--olive); border: 1px solid var(--line); }
+.ico svg { width: 20px; height: 20px; }
+.txt { min-width: 0; }
+.txt strong { display: block; font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; line-height: 1.2; }
+.txt span { display: block; font-size: 14px; color: var(--muted); overflow-wrap: anywhere; }
+.arrow { color: var(--gold-text); }
+.links a.primary .ico { background: var(--forest); color: var(--forest-ink); border-color: var(--gold); }
+
+/* About */
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin: 0; padding: 0; list-style: none; }
+.facts li { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.3; }
+.facts li b { display: block; font-family: var(--font-body); font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--mauve-text); font-weight: 500; margin-bottom: 4px; }
+
+/* Tagline */
+.thesis { margin: 2px 0 0; font-family: var(--font-display); font-style: italic; font-size: clamp(1.5rem, 5.5vw, 1.85rem); line-height: 1.2; color: var(--olive); text-wrap: balance; }
+
+/* Projects: each card hangs off the same gold trace as the links */
+.work { position: relative; list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.work::before { content: ""; position: absolute; left: 11px; top: 28px; bottom: 28px; width: 1.5px; background: var(--gold); }
+.work li { position: relative; display: grid; grid-template-columns: 24px 1fr; gap: 14px; }
+.node { position: relative; width: 24px; height: 24px; margin-top: 18px; border-radius: 50%; background: var(--cream); border: 1.5px solid var(--gold); display: grid; place-items: center; }
+.node::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+.card { min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px 18px; display: grid; gap: 6px; }
+.card .kick { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mauve-text); }
+.card h3 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.55rem; line-height: 1.15; }
+.card p { margin: 0; font-size: 15.5px; color: var(--ink); }
+.card ul.tags { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.card ul.tags li { display: block; font-size: 12px; padding: 2px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
+.card a.more { justify-self: start; margin-top: 4px; font-size: 14px; color: var(--olive); text-decoration: none; border-bottom: 1px solid var(--gold); }
+.card a.more:hover { color: var(--mauve-text); }
+.card a.more:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Mentoring & speaking */
+.offer { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.offer > div { min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px 18px; display: grid; gap: 8px; align-content: start; }
+.offer h3 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.45rem; line-height: 1.15; }
+.offer p { margin: 0; font-size: 15.5px; }
+.offer ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 15px; }
+.offer ul li { display: grid; grid-template-columns: 10px 1fr; gap: 10px; align-items: baseline; }
+.offer ul li::before { content: ""; width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--gold); transform: translateY(-1px); }
+.offer a.more { justify-self: start; margin-top: 2px; font-size: 14px; color: var(--olive); text-decoration: none; border-bottom: 1px solid var(--gold); }
+.offer a.more:hover { color: var(--mauve-text); }
+.offer a.more:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+/* Contact */
+.contact { background: var(--forest); color: var(--forest-ink); border-radius: 14px; padding: 22px 20px; display: grid; gap: 10px; border: 1px solid var(--gold); }
+.contact h3 { margin: 0; font-family: var(--font-display); font-weight: 500; font-size: 1.7rem; line-height: 1.15; }
+.contact h3 em { font-family: var(--font-script); font-style: normal; font-weight: 400; color: var(--mauve); font-size: 1.15em; }
+.contact p { margin: 0; font-size: 15.5px; opacity: 0.92; max-width: 52ch; }
+.contact .row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.contact a.btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px; text-decoration: none; font-size: 14px; letter-spacing: 0.06em; border: 1px solid var(--gold); color: var(--forest-ink); }
+.contact a.btn.solid { background: var(--gold); color: #1f2a1f; }
+.contact a.btn:hover { border-color: var(--mauve); }
+.contact a.btn:focus-visible { outline: 2px solid var(--mauve); outline-offset: 3px; }
+
+/* Request form */
+.req { display: grid; gap: 12px; margin-top: 8px; }
+.req .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.req label { display: grid; gap: 5px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); min-width: 0; }
+.req input, .req select, .req textarea {
+  width: 100%; font: inherit; font-size: 16px; letter-spacing: normal; text-transform: none;
+  color: var(--forest-ink); background: var(--field); border: 1px solid var(--field-line); border-radius: 10px; padding: 10px 12px;
+}
+.req textarea { min-height: 120px; resize: vertical; }
+.req select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(135deg, var(--gold) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 34px; }
+.req input:focus-visible, .req select:focus-visible, .req textarea:focus-visible { outline: 2px solid var(--gold); outline-offset: 1px; }
+.req .hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.req .send { justify-self: start; font: inherit; font-size: 14px; letter-spacing: 0.06em; padding: 11px 22px; border-radius: 999px; border: 1px solid var(--gold); background: var(--gold); color: #1f2a1f; cursor: pointer; }
+.req .send:hover { border-color: var(--mauve); }
+.req .send:focus-visible { outline: 2px solid var(--mauve); outline-offset: 3px; }
+.req .send[disabled] { opacity: 0.6; cursor: progress; }
+.status { margin: 0; font-size: 15px; min-height: 1.4em; }
+.status.ok { color: var(--gold); }
+.contact .alt { font-size: 14px; opacity: 0.85; }
+.contact .alt a { color: var(--forest-ink); border-bottom: 1px solid var(--gold); text-decoration: none; }
+
+/* Roles band */
+.roles { position: relative; margin-top: 48px; background: var(--forest); color: var(--forest-ink); border-top: 2px solid var(--gold); }
+.roles::before { content: ""; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' fill='none' stroke='%23c49a6c' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M0 18h22v24h30M52 42h0M40 0v10h28v22h28M10 96V74h26v-14M70 96V80h-18M96 60H78v16'/%3E%3Cg fill='%23c49a6c' stroke='none'%3E%3Ccircle cx='52' cy='42' r='2.6'/%3E%3Ccircle cx='36' cy='60' r='2.6'/%3E%3Ccircle cx='52' cy='80' r='2.6'/%3E%3Ccircle cx='78' cy='76' r='2.6'/%3E%3C/g%3E%3C/svg%3E"); background-size: 96px 96px; opacity: 0.18; pointer-events: none; }
+.roles ul { position: relative; }
+.roles ul { list-style: none; margin: 0 auto; max-width: 36rem; padding-inline: 20px; padding-block: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 0; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
+.roles li { display: flex; align-items: center; }
+.roles li + li::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); margin-inline: 12px; }
+footer { max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 16px 36px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; }
+
+@media (max-width: 420px) {
+  .wm-stem { font-size: 2.3rem; }
+  .wm-with { font-size: 1.8rem; }
+  .sprig { width: 140px; }
+}
+@media (prefers-reduced-motion: reduce) { .links a { transition: none; } .links a:hover { transform: none; } }
+</style>
+<style>html,body{margin:0}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-in">
+    <div class="wordmark" aria-label="STEM with Jazmine">
+      <span class="wm-stem">STEM</span>
+      <span class="wm-with">with Jazmine</span>
+      <span class="wm-tag">Building systems. Growing impact.</span>
+    </div>
+    <svg class="sprig" viewBox="0 0 200 150" aria-hidden="true">
+      <defs>
+        <g id="bloom">
+          <ellipse cx="0" cy="-7" rx="4.2" ry="7" fill="#f2efe6"/>
+          <ellipse cx="0" cy="-7" rx="4.2" ry="7" fill="#f2efe6" transform="rotate(72)"/>
+          <ellipse cx="0" cy="-7" rx="4.2" ry="7" fill="#f2efe6" transform="rotate(144)"/>
+          <ellipse cx="0" cy="-7" rx="4.2" ry="7" fill="#f2efe6" transform="rotate(216)"/>
+          <ellipse cx="0" cy="-7" rx="4.2" ry="7" fill="#f2efe6" transform="rotate(288)"/>
+          <circle r="2.4" fill="#c49a6c"/>
+        </g>
+        <g id="bud"><ellipse cx="0" cy="0" rx="3" ry="5.5" fill="#b48a8f"/></g>
+        <g id="leaf"><ellipse cx="0" cy="0" rx="4" ry="10" fill="#5b6b48"/></g>
+      </defs>
+      <!-- circuit traces, branching off the stem on the right -->
+      <g fill="none" stroke="#c49a6c" stroke-width="1.4" stroke-linecap="round">
+        <path d="M104 92 H138 V74 H170"/>
+        <path d="M118 110 H150 V100 H182"/>
+        <path d="M92 70 V54 H128"/>
+        <path d="M86 120 H124 V132 H160"/>
+      </g>
+      <g fill="#c49a6c">
+        <circle cx="170" cy="74" r="3"/><circle cx="182" cy="100" r="3"/><circle cx="128" cy="54" r="3"/><circle cx="160" cy="132" r="3"/>
+      </g>
+      <!-- stem and branches -->
+      <g fill="none" stroke="#7c6a4e" stroke-width="2.2" stroke-linecap="round">
+        <path d="M70 148 C74 120 80 96 86 70 S94 34 92 18"/>
+        <path d="M80 100 C66 86 52 78 34 74"/>
+        <path d="M86 70 C70 56 58 46 46 30"/>
+        <path d="M90 44 C102 34 110 26 122 20"/>
+      </g>
+      <use href="#leaf" transform="translate(58 86) rotate(-60)"/>
+      <use href="#leaf" transform="translate(74 112) rotate(-30)"/>
+      <use href="#leaf" transform="translate(64 50) rotate(-40)"/>
+      <use href="#leaf" transform="translate(104 34) rotate(60)"/>
+      <use href="#leaf" transform="translate(96 82) rotate(25)"/>
+      <use href="#bloom" transform="translate(34 72) scale(1.15)"/>
+      <use href="#bloom" transform="translate(46 28)"/>
+      <use href="#bloom" transform="translate(92 16) scale(1.25)"/>
+      <use href="#bloom" transform="translate(124 18) scale(0.9)"/>
+      <use href="#bud" transform="translate(76 34) rotate(-20)"/>
+      <use href="#bud" transform="translate(110 22) rotate(30)"/>
+    </svg>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <div class="mono" aria-hidden="true"><span>S<i>J</i></span></div>
+    <h1>Jazmine Scott</h1>
+    <p class="role"><b>AI &amp; Automation Engineer</b> · CTO, Turnstr+</p>
+    <p class="thesis">Engineering beautiful systems.</p>
+    <p class="bio">I build systems that catch what humans miss: fraud signals, compliance gaps, and the brittle handoffs between them. I'm CTO of Turnstr+, a streaming platform, and I share STEM, home restoration, and garden builds as @stemwithjazmine from a 1939 Spanish Colonial in Los Angeles.</p>
+  </section>
+
+  <p class="label">Find me</p>
+  <ul class="links">
+    <li><a class="primary" href="https://www.linkedin.com/in/jazminescott/" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4V9.75Z"/></svg></span>
+      <span class="txt"><strong>LinkedIn</strong><span>Experience, projects, and how to work with me</span></span>
+      <span class="arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="https://turnstrplus.com/" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5" width="19" height="13" rx="2"/><path d="m10 9 5 2.5-5 2.5V9Z" fill="currentColor"/><path d="M8 21h8"/></svg></span>
+      <span class="txt"><strong>Turnstr+</strong><span>The streaming platform I'm building as CTO</span></span>
+      <span class="arrow" aria-hidden="true">→</span></a></li>
+    <li><a href="https://www.instagram.com/stemwithjazmine" target="_blank" rel="noopener">
+      <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+      <span class="txt"><strong>@stemwithjazmine</strong><span>STEM, home restoration, gardening, mentorship</span></span>
+      <span class="arrow" aria-hidden="true">→</span></a></li>
+  </ul>
+
+  <p class="label">What I'm building</p>
+  <ul class="work">
+    <li><span class="node" aria-hidden="true"></span>
+      <article class="card">
+        <span class="kick">CTO · Streaming</span>
+        <h3>Turnstr+</h3>
+        <p>A streaming platform. As CTO I lead engineering across the whole pipeline, from bringing films in from distributors to ad insertion and the partner portal.</p>
+        <ul class="tags"><li>Content ingest</li><li>Ad insertion</li><li>Partner portal</li></ul>
+        <a class="more" href="https://turnstrplus.com/" target="_blank" rel="noopener">Visit Turnstr+ →</a>
+      </article></li>
+    <li><span class="node" aria-hidden="true"></span>
+      <article class="card">
+        <span class="kick">Personal system · Home Assistant</span>
+        <h3>Jazmine OS</h3>
+        <p>An operating system for my home and my life. Its first piece, Climate OS, keeps a 1939 house with no central air comfortable. It closes the west shades before the afternoon sun hits, cools rooms only when someone is in them, and protects the house in a heat wave even when nobody is home.</p>
+        <ul class="tags"><li>3 AC units</li><li>West-facing shades</li><li>Room sensors</li></ul>
+      </article></li>
+    <li><span class="node" aria-hidden="true"></span>
+      <article class="card">
+        <span class="kick">Restoration · Garden</span>
+        <h3>The 1939 Spanish Colonial</h3>
+        <p>Restoring an older Los Angeles home, building out the garden, and sharing the process along the way.</p>
+        <a class="more" href="https://www.instagram.com/stemwithjazmine" target="_blank" rel="noopener">Follow along on Instagram →</a>
+      </article></li>
+  </ul>
+
+  <p class="label">About</p>
+  <ul class="facts">
+    <li><b>Focus</b>Anomaly detection, fraud &amp; trade compliance</li>
+    <li><b>Community</b>Mentor to ~20 early-career engineers</li>
+  </ul>
+
+  <p class="label">Mentoring &amp; speaking</p>
+  <div class="offer">
+    <div>
+      <h3>Mentoring</h3>
+      <p>I mentor about 20 early-career engineers. If you're starting out in tech, especially coming from a non-traditional path, reach out.</p>
+      <ul>
+        <li>Breaking into engineering</li>
+        <li>Moving from testing into building</li>
+        <li>Growing into tech leadership</li>
+      </ul>
+      <a class="more" href="https://www.linkedin.com/in/jazminescott/" target="_blank" rel="noopener">Ask about mentoring →</a>
+    </div>
+    <div>
+      <h3>Talks &amp; workshops</h3>
+      <p>Topics I can speak on for teams, schools, and community groups:</p>
+      <ul>
+        <li>AI and automation that catches what people miss</li>
+        <li>Launching a streaming platform as a new CTO</li>
+        <li>Building a smart home in a 1939 house</li>
+        <li>STEM for kids and first-time builders</li>
+      </ul>
+      <a class="more" href="https://www.linkedin.com/in/jazminescott/" target="_blank" rel="noopener">Book a talk →</a>
+    </div>
+  </div>
+
+  <p class="label">Get in touch</p>
+  <section class="contact" aria-label="Contact">
+    <h3>Let's build <em>something</em></h3>
+    <p>Send a request about mentoring, a talk, Turnstr+, or my resume. It comes straight to my inbox, and I'll reply by email.</p>
+    <form class="req" id="request-form" novalidate>
+      <div class="two">
+        <label for="req-name">Your name<input id="req-name" name="name" type="text" autocomplete="name" required></label>
+        <label for="req-email">Your email<input id="req-email" name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <label for="req-topic">What's this about?
+        <select id="req-topic" name="topic" required>
+          <option value="Mentoring">Mentoring</option>
+          <option value="Speaking or a workshop">Speaking or a workshop</option>
+          <option value="Turnstr+ or business">Turnstr+ or business</option>
+          <option value="Resume request">Resume request</option>
+          <option value="Something else">Something else</option>
+        </select>
+      </label>
+      <label for="req-message">Message<textarea id="req-message" name="message" required></textarea></label>
+      <input type="hidden" name="_subject" value="New request from jazminescott.com">
+      <div class="hp" aria-hidden="true"><label for="req-gotcha">Leave this empty<input id="req-gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+      <button class="send" id="req-send" type="submit">Send request</button>
+      <p class="status" id="req-status" role="status" aria-live="polite"></p>
+    </form>
+    <p class="alt">Prefer LinkedIn? <a href="https://www.linkedin.com/in/jazminescott/" target="_blank" rel="noopener">Message me there</a>.</p>
+  </section>
+</main>
+
+<section class="roles" aria-label="What I do">
+  <ul>
+    <li>Engineer</li><li>Systems thinker</li><li>Builder</li><li>Gardener</li><li>Leader</li><li>Mentor</li><li>Creator</li>
+  </ul>
+</section>
+<footer><span>Los Angeles, CA</span><span>jazminescott.com</span></footer>
+
+<script>
+(() => {
+  // Formspree form URL, e.g. "https://formspree.io/f/abcdwxyz". Empty until the form is created.
+  const ENDPOINT = "https://formspree.io/f/xyekwded";
+  const form = document.getElementById("request-form");
+  const send = document.getElementById("req-send");
+  const status = document.getElementById("req-status");
+  const say = (msg, ok) => { status.textContent = msg; status.classList.toggle("ok", !!ok); };
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = form.elements.name.value.trim();
+    const email = form.elements.email.value.trim();
+    const message = form.elements.message.value.trim();
+    if (!name || !message) { say("Please add your name and a message."); return; }
+    if (!form.elements.email.checkValidity() || !email) { say("Please enter an email address I can reply to."); return; }
+    if (!ENDPOINT) { say("The request form isn't connected yet. Please message me on LinkedIn for now."); return; }
+    send.disabled = true; say("Sending…");
+    try {
+      const res = await fetch(ENDPOINT, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+      if (!res.ok) throw new Error(String(res.status));
+      form.reset();
+      say("Thanks, your request was sent. I'll reply by email.", true);
+    } catch (err) {
+      say("That didn't send. Please try again, or message me on LinkedIn.");
+    } finally {
+      send.disabled = false;
+    }
+  });
+})();
+</script>
+</body>
+</html>
