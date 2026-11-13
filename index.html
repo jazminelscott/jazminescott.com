@@ -80,6 +80,7 @@ body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(
 .mono { width: 64px; height: 64px; border-radius: 50%; background: var(--forest); border: 2px solid var(--gold); display: grid; place-items: center; font-family: var(--font-display); font-size: 28px; color: var(--forest-ink); letter-spacing: -0.02em; }
 .mono { line-height: 1; padding-bottom: 6px; }
 .mono i { font-style: normal; color: var(--mauve); display: inline-block; transform: translateY(-0.08em); }
+.headshot { display: block; width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); box-shadow: 0 0 0 4px var(--cream); background: var(--forest); }
 h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem, 9vw, 3.2rem); line-height: 1; margin: 0; text-wrap: balance; }
 .role { margin: 0; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
 .role b { font-weight: 500; color: var(--mauve-text); }
@@ -250,7 +251,7 @@ footer { max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 
 
 <main class="wrap">
   <section class="intro">
-    <div class="mono" aria-hidden="true"><span>S<i>J</i></span></div>
+    <img class="headshot" src="headshot.jpg" width="96" height="96" alt="Jazmine Scott on the red carpet at the A Good Hand Wasted premiere">
     <h1>Jazmine Scott</h1>
     <p class="role"><b>AI &amp; Automation Engineer</b> · CTO, Turnstr+</p>
     <p class="thesis">Engineering beautiful systems.</p>
