@@ -131,6 +131,13 @@ h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem
 .card ul.tags li { display: block; font-size: 12px; padding: 2px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
 .card a.more { justify-self: start; margin-top: 4px; font-size: 14px; color: var(--olive); text-decoration: none; border-bottom: 1px solid var(--gold); }
 .card a.more:hover { color: var(--mauve-text); }
+.card-photo { grid-template-columns: 170px minmax(0, 1fr); gap: 18px; align-items: start; }
+.card-body { min-width: 0; display: grid; gap: 6px; align-content: start; }
+.card-img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; border: 1px solid var(--gold); }
+@media (max-width: 520px) {
+  .card-photo { grid-template-columns: 1fr; }
+  .card-img { max-width: 320px; }
+}
 .card a.more:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* Mentoring & speaking */
@@ -277,12 +284,15 @@ footer { max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 
   <p class="label">What I'm building</p>
   <ul class="work">
     <li><span class="node" aria-hidden="true"></span>
-      <article class="card">
+      <article class="card card-photo">
+        <img class="card-img" src="red-carpet.jpg" width="800" height="1000" loading="lazy" alt="Jazmine walking the red carpet at the Turnstr+ premiere of A Good Hand Wasted">
+        <div class="card-body">
         <span class="kick">CTO · Streaming</span>
         <h3>Turnstr+</h3>
         <p>A streaming platform. As CTO I lead engineering across the whole pipeline, from bringing films in from distributors to ad insertion and the partner portal.</p>
         <ul class="tags"><li>Content ingest</li><li>Ad insertion</li><li>Partner portal</li></ul>
         <a class="more" href="https://turnstrplus.com/" target="_blank" rel="noopener">Visit Turnstr+ →</a>
+        </div>
       </article></li>
     <li><span class="node" aria-hidden="true"></span>
       <article class="card">
