@@ -141,6 +141,9 @@ h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem
 .card a.more:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
 /* Mentoring & speaking */
+.banner { margin: 0 0 14px; }
+.banner img { display: block; width: 100%; height: auto; aspect-ratio: 1024 / 484; object-fit: cover; border-radius: 14px; border: 1px solid var(--gold); }
+@media (max-width: 520px) { .banner img { aspect-ratio: 4 / 3; object-position: 62% 50%; } }
 .offer { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
 .offer > div { min-width: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px 18px; display: grid; gap: 8px; align-content: start; }
 .offer h3 { margin: 0; font-family: var(--font-display); font-weight: 600; font-size: 1.45rem; line-height: 1.15; }
@@ -328,6 +331,7 @@ footer { max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 
   </ul>
 
   <p class="label">Mentoring &amp; speaking</p>
+  <figure class="banner"><img src="mentoring.jpg" width="1024" height="484" loading="lazy" alt="Jazmine teaching a coding workshop, leaning over a table to help students at their laptops"></figure>
   <div class="offer">
     <div>
       <h3>Mentoring</h3>
