@@ -66,14 +66,14 @@ body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(
 /* Masthead */
 .mast { --trace: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' fill='none' stroke='%23c49a6c' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M0 18h22v24h30M52 42h0M40 0v10h28v22h28M10 96V74h26v-14M70 96V80h-18M96 60H78v16'/%3E%3Cg fill='%23c49a6c' stroke='none'%3E%3Ccircle cx='52' cy='42' r='2.6'/%3E%3Ccircle cx='36' cy='60' r='2.6'/%3E%3Ccircle cx='52' cy='80' r='2.6'/%3E%3Ccircle cx='78' cy='76' r='2.6'/%3E%3C/g%3E%3C/svg%3E"); position: relative; background: var(--forest); color: var(--forest-ink); border-bottom: 2px solid var(--gold); }
 .mast::before { content: ""; position: absolute; inset: 0; background: var(--trace); background-size: 96px 96px; opacity: 0.22; pointer-events: none; }
-.mast-in { position: relative; max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 34px 38px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mast-in { position: relative; max-width: 52rem; margin: 0 auto; padding-inline: 20px; padding-block: 34px 38px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .wordmark { display: grid; gap: 2px; min-width: 0; }
 .wm-stem { font-family: var(--font-display); font-weight: 500; font-size: 3rem; line-height: 0.9; letter-spacing: 0.06em; }
 .wm-with { font-family: var(--font-script); font-size: 2.3rem; line-height: 0.9; color: var(--mauve); margin-left: 0.6rem; }
 .wm-tag { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-top: 10px; }
 .sprig { width: 210px; max-width: 48%; height: auto; flex: none; }
 
-.wrap { max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 34px 0; }
+.wrap { max-width: 52rem; margin: 0 auto; padding-inline: 20px; padding-block: 34px 0; }
 
 /* Intro */
 .intro { display: grid; gap: 12px; }
@@ -110,7 +110,7 @@ h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem
 .links a.primary .ico { background: var(--forest); color: var(--forest-ink); border-color: var(--gold); }
 
 /* About */
-.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; margin: 0; padding: 0; list-style: none; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin: 0; padding: 0; list-style: none; }
 .facts li { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.3; }
 .facts li b { display: block; font-family: var(--font-body); font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--mauve-text); font-weight: 500; margin-bottom: 4px; }
 
@@ -131,7 +131,7 @@ h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem
 .card ul.tags li { display: block; font-size: 12px; padding: 2px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); }
 .card a.more { justify-self: start; margin-top: 4px; font-size: 14px; color: var(--olive); text-decoration: none; border-bottom: 1px solid var(--gold); }
 .card a.more:hover { color: var(--mauve-text); }
-.card-photo { grid-template-columns: 170px minmax(0, 1fr); gap: 18px; align-items: start; }
+.card-photo { grid-template-columns: 220px minmax(0, 1fr); gap: 22px; align-items: start; }
 .card-body { min-width: 0; display: grid; gap: 6px; align-content: start; }
 .card-img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; border: 1px solid var(--gold); }
 @media (max-width: 520px) {
@@ -191,10 +191,10 @@ h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem
 .roles { position: relative; margin-top: 48px; background: var(--forest); color: var(--forest-ink); border-top: 2px solid var(--gold); }
 .roles::before { content: ""; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' fill='none' stroke='%23c49a6c' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M0 18h22v24h30M52 42h0M40 0v10h28v22h28M10 96V74h26v-14M70 96V80h-18M96 60H78v16'/%3E%3Cg fill='%23c49a6c' stroke='none'%3E%3Ccircle cx='52' cy='42' r='2.6'/%3E%3Ccircle cx='36' cy='60' r='2.6'/%3E%3Ccircle cx='52' cy='80' r='2.6'/%3E%3Ccircle cx='78' cy='76' r='2.6'/%3E%3C/g%3E%3C/svg%3E"); background-size: 96px 96px; opacity: 0.18; pointer-events: none; }
 .roles ul { position: relative; }
-.roles ul { list-style: none; margin: 0 auto; max-width: 36rem; padding-inline: 20px; padding-block: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 0; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
+.roles ul { list-style: none; margin: 0 auto; max-width: 52rem; padding-inline: 20px; padding-block: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 0; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; }
 .roles li { display: flex; align-items: center; }
 .roles li + li::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); margin-inline: 12px; }
-footer { max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 16px 36px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; }
+footer { max-width: 52rem; margin: 0 auto; padding-inline: 20px; padding-block: 16px 36px; font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; }
 
 @media (max-width: 420px) {
   .wm-stem { font-size: 2.3rem; }
@@ -265,7 +265,7 @@ footer { max-width: 36rem; margin: 0 auto; padding-inline: 20px; padding-block: 
     <h1>Jazmine Scott</h1>
     <p class="role"><b>AI &amp; Automation Engineer</b> · CTO, Turnstr+</p>
     <p class="thesis">Engineering beautiful systems.</p>
-    <p class="bio">I'm a software engineer, CTO and systems thinker who believes engineering is a way of thinking. I lead engineering at Turnstr+, the free streaming platform we launched in October 2026. My background is in testing and test automation, AI, and data management: building automated checks, models and data pipelines that catch what people miss, like fraud signals and trade compliance gaps. At home I run the same playbook on a 1939 Spanish Revival in Los Angeles: a smart home, a sensor-watered garden, and a restoration I share as @stemwithjazmine. I want to be the mentor I wish I had and make hard things feel possible.</p>
+    <p class="bio">I'm a software engineer, CTO of Turnstr+ and a systems thinker. My background is test automation, AI and data management, building systems that catch what people miss. At home I run the same playbook on a 1939 Spanish Revival in Los Angeles, and I share it all as @stemwithjazmine. I want to be the mentor I wish I had.</p>
   </section>
 
   <p class="label">Find me</p>
