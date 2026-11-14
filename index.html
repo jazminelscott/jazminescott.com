@@ -130,6 +130,7 @@ h1 { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem
 .card-photo { grid-template-columns: 220px minmax(0, 1fr); gap: 22px; align-items: start; }
 .card-body { min-width: 0; display: grid; gap: 6px; align-content: start; }
 .card-img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; border: 1px solid var(--gold); }
+.card-video { aspect-ratio: 9 / 16; object-fit: cover; background: var(--forest); }
 @media (max-width: 520px) {
   .card-photo { grid-template-columns: 1fr; }
   .card-img { max-width: 320px; }
@@ -295,7 +296,7 @@ footer { max-width: 52rem; margin: 0 auto; padding-inline: 20px; padding-block: 
       </article></li>
     <li><span class="node" aria-hidden="true"></span>
       <article class="card card-photo">
-        <img class="card-img" src="home-assistant.jpg?v=4" width="720" height="900" loading="lazy" alt="Jazmine holding up the Raspberry Pi board that runs Home Assistant">
+        <video class="card-img card-video" controls playsinline preload="none" poster="jazmine-os-poster.jpg" width="720" height="1280" aria-label="Video: Jazmine shows the Raspberry Pi that runs Home Assistant and the smart home devices she uses"><source src="jazmine-os.mp4" type="video/mp4"></video>
         <div class="card-body">
         <span class="kick">Home Assistant · AI</span>
         <h3>Jazmine OS</h3>
